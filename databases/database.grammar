@@ -1,0 +1,31 @@
+databaseNode
+ root
+ inScope databaseNode
+ pattern database$
+ inScope abstractTopLevelNode
+ catchAllNodeType errorNode
+ firstCellType keywordCell
+errorNode
+ baseNodeType errorNode
+nameCell
+ highlightScope string
+urlCell
+ highlightScope string
+keywordCell
+ highlightScope keyword
+intCell
+ highlightScope constant.numeric.integer
+abstractTopLevelNode
+ firstCellType keywordCell
+nameNode
+ catchAllCellType nameCell
+ extends abstractTopLevelNode
+urlNode
+ cells urlCell
+ extends abstractTopLevelNode
+columnsNode
+ cells intCell
+ extends abstractTopLevelNode
+rowsNode
+ cells intCell
+ extends abstractTopLevelNode
